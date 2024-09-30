@@ -1,27 +1,51 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="./css/style.css">
+    <style>
+        #toggle:checked + label .dot {
+            transform: translateX(100%);
+        }
+    </style>
 </head>
-<body class="min-h-screen bg-gradient-to-b from-amber-200 to-amber-100">
-    <section class="p-5 py-8 max-w-screen-md mx-auto">
-        <div class="rounded-md shadow-lg bg-slate-50">
+<body class="min-h-screen bg-gradient-to-b from-amber-200 to-amber-100 dark:from-slate-900 dark:to-slate-700">
+    <div class="flex justify-center items-center pt-3">
+        <span class="text-sm font-bold text-slate-800 dark:text-slate-100 mr-2">light</span>
+        <input type="checkbox" id="toggle" class="hidden">
+        <label for="toggle" class="relative">
+            <div class="w-10 h-6 p-1 bg-slate-700 dark:bg-slate-500 rounded-full flex items-center cursor-pointer">
+                <div class="dot w-4 h-4 bg-white rounded-full transition-transform duration-300"></div>
+            </div>
+        </label>
+        <span class="text-sm font-bold text-slate-800 dark:text-slate-100 ml-2">dark</span>
+    </div>
+    <section class="p-5 pt-3 max-w-screen-md mx-auto">
+        <div class="rounded-md shadow-lg bg-slate-50 dark:bg-slate-700">
             <img class="w-full rounded-t-md" src="https://via.placeholder.com/400x200" alt="Image">
             <div class="p-3">
-                <h1 class="mb-3 text-xl sm:text-4xl font-extrabold text-sky-950">Belajar Styling <span class="bg-gradient-to-r from-sky-800 to-sky-600 bg-clip-text text-transparent">TailwindCSS</span></h1>
-                <h2 class="mb-4 text-base sm:text-xl font-bold text-gray-500">By <a href="#" class="text-gray-700 hover:text-gray-900 hover:underline">Aqilul Muttaqin</a> in 2024</h2>
-                <p class="mb-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint placeat mollitia odio adipisci ipsa corrupti, quasi delectus. Explicabo repellat similique omnis exercitationem deserunt. Perferendis, illo natus incidunt voluptatum ex maiores. Nobis vitae recusandae assumenda. Eveniet nisi sequi ipsa facilis porro ab tenetur harum possimus, consequuntur vero autem velit! Placeat, <a href="#" class="underline text-sky-700 hover:text-sky-900">mollitia</a>.</p>
+                <h1 class="mb-3 text-xl sm:text-4xl font-extrabold text-sky-950 dark:text-slate-100">Belajar Styling <span class="bg-gradient-to-r from-sky-800 dark:from-sky-500 to-sky-600 dark:to-sky-300 bg-clip-text text-transparent">TailwindCSS</span></h1>
+                <h2 class="mb-4 text-base sm:text-xl font-bold text-gray-500 dark:text-slate-300">By <a href="#" class="text-gray-700 dark:text-slate-200 hover:text-gray-900 dark:hover:text-slate-100 hover:underline">Aqilul Muttaqin</a> in 2024</h2>
+                <p class="mb-4 dark:text-slate-300">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint placeat mollitia odio adipisci ipsa corrupti, quasi delectus. Explicabo repellat similique omnis exercitationem deserunt. Perferendis, illo natus incidunt voluptatum ex maiores. Nobis vitae recusandae assumenda. Eveniet nisi sequi ipsa facilis porro ab tenetur harum possimus, consequuntur vero autem velit! Placeat, <a href="#" class="underline text-sky-700 dark:text-sky-500 hover:text-sky-900 dark:hover:text-sky-400">mollitia</a>.</p>
                 <div class="mb-4 min-h-36 bg-center rounded border-4 border-amber-300 text-center flex items-center blur-sm hover:blur-none" style="background-image: url(https://via.placeholder.com/400x200);">
                     <div class="w-full h-full rounded text-center flex items-center bg-green-300 mix-blend-multiply">
                         <p class="italic p-3 text-xl font-thin">"Lorem ipsum, dolor sit amet consectetur adipisicing elit. Saepe nostrum velit neque provident quis vero aliquid laborum sunt possimus sed!"</p>
                     </div>
                 </div>
-                <p class="mb-2">Lorem ipsum dolor sit amet consectetur, adipisicing elit. <span class="bg-yellow-300">Optio similique id aliquid, voluptatibus facere temporibus quasi reiciendis possimus!</span> Eaque cupiditate ad earum, optio tempore voluptates a officia vitae quisquam quam!</p>
+                <p class="mb-2 dark:text-slate-300">Lorem ipsum dolor sit amet consectetur, adipisicing elit. <span class="bg-yellow-300 dark:text-slate-900">Optio similique id aliquid, voluptatibus facere temporibus quasi reiciendis possimus!</span> Eaque cupiditate ad earum, optio tempore voluptates a officia vitae quisquam quam!</p>
             </div>
         </div>
     </section>
+
+    <script>
+        const toggle = document.querySelector('#toggle');
+        const html = document.querySelector('html');
+
+        toggle.addEventListener('click', function() {
+            toggle.checked ? html.classList.add('dark') : html.classList.remove('dark');
+        })
+    </script>
 </body>
 </html>
