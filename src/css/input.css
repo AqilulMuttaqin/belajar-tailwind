@@ -1,3 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.active {
+    @apply rounded-full bg-gradient-to-r from-slate-900 to-blue-800 text-white font-bold;
+}
