@@ -12,8 +12,10 @@ window.addEventListener('scroll', function() {
         if (top >= offset && top < offset + height) {
             navLinks.forEach((link) => {
                 link.classList.remove('active');
+                link.classList.add('hover:text-sky-900');
                 if (link.querySelector('a').getAttribute('href') === '#' + id) {
                     link.classList.add('active');
+                    link.classList.remove('hover:text-sky-900');
                 }
             });
         }
