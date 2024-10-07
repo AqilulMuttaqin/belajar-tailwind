@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,25 +7,46 @@
     <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
-    <nav class="fixed top-3 left-1/2 -translate-x-1/2">
-        <ul class="bg-white opacity-80 border shadow-md px-2 py-1.5 rounded-full flex items-center">
-            <li class="mr-1 px-3 py-1 text-slate-700 hover:text-blue-900 font-bold active" id="home-link">
+    <nav class="fixed top-6 left-1/2 -translate-x-1/2">
+        <ul class="bg-white bg-opacity-90 border shadow-md px-2 py-1.5 rounded-full flex items-center">
+            <li class="mr-1 px-5 py-2 text-slate-700 hover:text-blue-900 font-bold text-sm active" id="home-link">
                 <a href="#home">Home</a>
             </li>
-            <li class="mx-1 px-3 py-1 text-slate-700 hover:text-blue-900 font-bold" id="about-link">
+            <li class="mx-1 px-5 py-2 text-slate-700 hover:text-blue-900 font-bold text-sm" id="about-link">
                 <a href="#about">About</a>
             </li>
-            <li class="mx-1 px-3 py-1 text-slate-700 hover:text-blue-900 font-bold" id="experience-link">
+            <li class="mx-1 px-5 py-2 text-slate-700 hover:text-blue-900 font-bold text-sm" id="experience-link">
                 <a href="#experience">Experience</a>
             </li>
-            <li class="ml-1 px-3 py-1 text-slate-700 hover:text-blue-900 font-bold" id="contact-link">
+            <li class="ml-1 px-5 py-2 text-slate-700 hover:text-blue-900 font-bold text-sm" id="contact-link">
                 <a href="#contact">Contact</a>
             </li>
         </ul>
     </nav>
 
-    <section id="home" class="h-[700px] bg-pink-950">
-
+    <section id="home">
+        <div class="container max-w-screen-md mx-auto flex flex-col items-center py-28">
+            <div class="h-64 w-64 rounded-full mb-6 overflow-hidden animate-uneven">
+                <img src="../src/img/profile.jpg" alt="profile" class="h-full w-full object-cover">
+            </div>
+            <h1 class="font-extrabold text-4xl bg-gradient-to-r from-sky-950 to-sky-700 bg-clip-text text-transparent mb-2">Muhammad Aqilul Muttaqin</h1>
+            <h2 id="typewriter" class="font-semibold text-3xl text-slate-900 mb-5">Role</h2>
+            <p class="font-normal text-lg text-slate-900 mb-2">Connect with me</p>
+            <div class="flex justify-center items-center gap-2 mb-6">
+                <a href="" class="h-9 w-9 rounded-full overflow-hidden">
+                    <img src="../src/img/linkedin.png" alt="linkedin" class="h-full w-full object-cover">
+                </a>
+                <a href="" class="h-9 w-9 rounded-full overflow-hidden">
+                    <img src="../src/img/instagram.png" alt="instagram" class="h-full w-full object-cover">
+                </a>
+                <a href="" class="h-9 w-9 rounded-full overflow-hidden">
+                    <img src="../src/img/github.png" alt="github" class="h-full w-full object-cover">
+                </a>
+            </div>
+            <a href="#" class="font-bold text-slate-50 bg-gradient-to-r from-sky-950 to-sky-700 px-5 py-2 rounded-full shadow hover:scale-105">
+                Download CV
+            </a>
+        </div>
     </section>
 
     <section id="about" class="h-[700px] bg-sky-950">
@@ -40,6 +61,7 @@
 
     </section>
 
-    <script src="./js/script.js"></script>
+    <script src="../src/js/typewriter.js"></script>
+    <script src="../src/js/script.js"></script>
 </body>
 </html>
