@@ -25,8 +25,8 @@
     </nav>
 
     <section id="home">
-        <div class="container max-w-screen-md mx-auto flex flex-col items-center py-28">
-            <div class="h-64 w-64 rounded-full mb-6 overflow-hidden animate-uneven">
+        <div class="container max-w-screen-md mx-auto flex flex-col items-center py-28 px-5">
+            <div class="h-56 w-56 md:h-64 md:w-64 rounded-full mb-6 overflow-hidden animate-uneven">
                 <img src="../src/img/profile.jpg" alt="profile" class="h-full w-full object-cover">
             </div>
             <h1 class="font-extrabold text-4xl bg-gradient-to-r from-sky-950 to-sky-700 bg-clip-text text-transparent text-center mb-2">Muhammad Aqilul Muttaqin</h1>
@@ -49,8 +49,43 @@
         </div>
     </section>
 
-    <section id="about" class="h-[700px] bg-sky-950">
+    <section id="about">
+        <div class="container max-w-screen-md mx-auto pt-28 pb-14 px-5">
+            <h1 class="font-extrabold text-4xl bg-gradient-to-r from-sky-950 to-sky-700 bg-clip-text text-transparent text-center mb-4 md:mb-8">About Me</h1>
+            <div class="flex flex-col-reverse md:flex-row items-center">
+                <p class="basis-1/2 md:basis-full text-base font-medium text-slate-900 indent-11 text-justify">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Autem fugit, blanditiis, nemo aliquid placeat saepe laboriosam minus voluptas dicta delectus neque nostrum molestias accusamus rerum enim ipsum quod non veniam! Illum vero recusandae possimus, architecto culpa sunt! Perspiciatis aut odio explicabo eaque magnam obcaecati mollitia impedit, pariatur incidunt enim corrupti!</p>
+                <div class="basis-1/2 md:basis-full flex justify-center items-start">
+                    <div class="max-w-64 h-48 md:max-w-full md:h-56 overflow-hidden flex items-center">
+                        <img src="../src/img/it.gif" alt="about-me" class="object-cover">
+                    </div>
+                </div>
+            </div>
+        </div>
 
+        <div class="container max-w-screen-md mx-auto pt-14 pb-28 px-5">
+            <h1 class="font-extrabold text-4xl bg-gradient-to-r from-sky-950 to-sky-700 bg-clip-text text-transparent text-center mb-8">Education</h1>
+            <div class="h-48 max-w-full md:h-56 overflow-hidden flex justify-center">
+                <img src="../src/img/education.gif" alt="about-me" class="object-cover rounded-3xl">
+            </div>
+            <div class="my-5">
+                <div class="flex flex-col sm:flex-row sm:justify-between sm:mb-2">
+                    <h3 class="text-xl font-bold text-slate-900 text-center mb-2 sm:mb-0">Politeknik Negeri Malang</h3>
+                    <p class="text-base text-slate-900">Aug 2021 - Jul 2025 (Expected)</p>
+                </div>
+                <p class="text-base font-medium text-slate-900 mb-2">D4 Informatics Engineering</p>
+                <button class="font-bold text-sm text-slate-50 bg-gradient-to-r from-sky-950 to-sky-700 px-5 py-2 rounded-full shadow">GPA: 3.72 / 4.00</button>
+            </div>
+            <hr>
+            <div class="my-5">
+                <div class="flex flex-col sm:flex-row sm:justify-between sm:mb-2">
+                    <h3 class="text-xl font-bold text-slate-900 text-center mb-2 sm:mb-0">MAS Al-hayatul Islamiyah</h3>
+                    <p class="text-base text-slate-900">Jun 2017 - Jun 2020</p>
+                </div>
+                <p class="text-base font-medium text-slate-900 mb-2">Natural Science</p>
+                <button class="font-bold text-sm text-slate-50 bg-gradient-to-r from-sky-950 to-sky-700 px-4 py-2 rounded-full shadow">GPA: 3.72 / 4.00</button>
+            </div>
+            <hr>
+        </div>
     </section>
 
     <section id="experience" class="h-[700px] bg-pink-900">
