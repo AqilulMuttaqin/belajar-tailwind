@@ -25,6 +25,25 @@ window.addEventListener('scroll', function() {
     });
 });
 
+var toggle = document.querySelector('#toggle');
+var html = document.querySelector('html');
+var lightIcon = document.querySelector('#light-icon');
+var darkIcon = document.querySelector('#dark-icon');
+
+toggle.addEventListener('click', function() {
+    if (toggle.checked) {
+        html.classList.remove('light');
+        html.classList.add('dark');
+        darkIcon.classList.remove('hidden');
+        lightIcon.classList.add('hidden');
+    } else {
+        html.classList.remove('dark');
+        html.classList.add('light');
+        lightIcon.classList.remove('hidden');
+        darkIcon.classList.add('hidden');
+    }
+});
+
 var app = document.getElementById('typewriter');
     
 var typewriter = new Typewriter(app, {
